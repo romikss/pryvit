@@ -1,0 +1,370 @@
+:root {
+  --darkgreen: rgba(9, 104, 125, 100%);
+  --darkgreen90: rgba(9, 104, 125, 90%);
+  --lightwhite: rgba(255,255,255,.5);
+  --greenbg: #3E8389;
+  --pink: #F29494;
+  --darkpink: #DD8888;
+  --lightpink: #FAABAB;
+  --pinkbg: #F9CDCD;
+
+  --darkblue: #0C193B;
+  --blue: #005bbb;
+  --purple: #795FB2;
+  --beige: #F2EDD5;
+  --yellow: #ffdd50;
+  --green: #03b2a0;
+
+  --newpink: #F4ADCF;
+  --red: #EB1F2A;
+
+  --black: #1a1b1f;
+
+  --green: #34b170;
+  --orange: #E08229;
+
+}
+
+/* Body */
+
+body {
+  font-family: 'Montserrat', sans-serif;
+}
+
+h1 {
+  text-align: center;
+  font-family: 'Bebas Neue', cursive;
+  font-size: 50px;
+  font-weight: 800;
+  margin-bottom: 50px;
+}
+
+h2 {
+  color: var(--blue);
+  font-family: 'Bebas Neue', cursive;
+  text-align: center;
+  font-size: 50px;
+}
+
+h3 {
+  font-family: 'Bebas Neue', cursive;
+  font-size: 30px;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+h4 {
+  color: var(--darkgreen);
+}
+
+h5 {
+  font-weight: 800;
+  text-align: center;
+}
+
+p {
+  text-align: center;
+  font-size: 20px;
+}
+
+.btn {
+  border: 0;
+}
+
+
+/* Navbar */
+
+.navbar {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
+#navbar-ind {
+  background-color: #fff ;
+  color: var(--orange);
+}
+
+#navbar-com {
+  background-color: var(--blue);
+  color: var(--yellow);
+}
+
+#navbar-ind a {
+  color: var(--orange);
+}
+
+#navbar-com a {
+  color: var(--yellow);
+}
+
+#navbar-ind a:hover {
+  color: var(--green);
+}
+
+#navbar-com a:hover {
+  color: var(--lightwhite);
+}
+
+.nav-item {
+  margin-right: 10px;
+}
+
+.btn {
+  background-color: var(--yellow);
+  border-radius: 30px;
+  color: var(--blue);
+  font-weight: 600;
+}
+
+.btn:hover {
+  background-color: var(--blue);
+  color: var(--yellow);
+}
+
+#nav-button {
+  color: #fff;
+  border-radius: 2px;
+  width: 180px;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+
+/* Intro */
+
+
+.intro-main {
+  padding-top: 10rem;
+  padding-bottom: 50px;
+}
+
+#intro-section-com {
+  background-color: var(--yellow);
+}
+
+#intro-section-ind {
+  background-color: var(--green);
+}
+
+#intro-section-ind h1 {
+  color: #fff;
+}
+
+#intro-section-ind h2 {
+  color: #fff;
+}
+
+#container-intro {
+  padding-left: 30px;
+  padding-right: 30px;
+}
+
+#container-intro-ind {
+  padding-left: 30px;
+  padding-right: 30px;
+}
+
+.intro-title {
+  color: var(--blue);
+}
+
+#intro-button {
+  width: 180px;
+  background-color: var(--newpink);
+}
+
+.section-break-container {
+  position: relative;
+  min-width: 100%;
+}
+
+
+#join-btn {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+
+/* Table/Pledges Section */
+
+#table-section {
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+}
+
+#table-section h2 {
+  color: var(--orange);
+}
+
+.card h5 {
+  text-align: left;
+}
+
+.card p {
+  text-align: left;
+}
+
+/* Form */
+
+#form-section {
+  padding-top:12rem;
+  padding-bottom: 5rem;
+  margin-top: -8rem;
+}
+
+#container-pledge {
+  padding-left: 30px;
+  padding-right: 30px;
+}
+
+/* About */
+
+.about-main {
+  padding-top:3rem;
+  padding-bottom: 3rem;
+}
+
+#container-about-com {
+  padding-left: 30px;
+  padding-right: 30px;
+}
+
+#container-about-ind {
+  padding-left: 30px;
+  padding-right: 30px;
+}
+
+#about-section-com {
+  background-color: var(--yellow);
+}
+
+#about-section-ind {
+  background-color: var(--orange);
+}
+
+.about-main p {
+  text-align: left;
+  margin-bottom: 30px;
+}
+
+.about-main h3 {
+  width: 100%;
+}
+
+#about-title {
+  color: var(--black);
+}
+
+/* Footer */
+
+.footer-main {
+  background-color: var(--black);
+  padding-bottom: 3rem;
+  padding-top: 3rem;
+  text-align: center;
+}
+
+#contact-footer-com {
+  text-align: center;
+}
+
+#contact-footer-ind {
+  text-align: center;
+}
+
+.logo-footer {
+  text-align: center;
+}
+
+/* Media Queries */
+
+@media screen and (min-width: 700px ) {
+
+.footer-main {
+  text-align: left;
+}
+
+.footer-column {
+  align-items: start;
+}
+
+#nav-button {
+  border-radius: 30px;
+  margin-left: 15px;
+  margin-top: 0;
+  width: auto;
+}
+
+.partner-img img {
+  width: 100px;
+  height: 71.4px;
+}
+
+h1 {
+  font-size: 100px;
+}
+
+}
+
+
+@media screen and (min-width: 990px ) {
+
+  .section-break-container {
+    position: relative;
+    margin-top: 0rem;
+    min-width: 100%;
+  }
+
+
+
+  .partner-img img {
+    width: 140px;
+    height: 100px;
+  }
+
+  #join-btn {
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+  }
+
+  #award-container {
+    display: flex;
+    justify-content: center;
+  }
+
+
+}
+
+@media screen and (min-width: 400px ) {
+
+  h1 {
+    font-size: 70px;
+  }
+}
+
+
+@media screen and (max-width: 375px ) {
+
+  .award-info {
+    font-size: 1em;
+    width: 150px;
+  }
+
+}
+
+
+@font-face {
+  font-family: 'Circular-Std';
+  src: url('https://assets.website-files.com/5d80c03f1edd7bd68fcdb623/5d80d6528880e80f7f8bae66_CircularStd-Medium.woff2') format('woff2'), url('https://assets.website-files.com/5d80c03f1edd7bd68fcdb623/5d80d652dd362e6b817f0ff2_CircularStd-Medium.eot') format('embedded-opentype'), url('https://assets.website-files.com/5d80c03f1edd7bd68fcdb623/5d80d652dd362e4ead7f0ff0_CircularStd-Medium.woff') format('woff'), url('https://assets.website-files.com/5d80c03f1edd7bd68fcdb623/5d80d6522c3c12038912270d_CircularStd-Medium.ttf') format('truetype'), url('https://assets.website-files.com/5d80c03f1edd7bd68fcdb623/5d80d652dd362e92d87f0ff1_CircularStd-Medium.otf') format('opentype');
+  font-weight: 500;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Circular-Std';
+  src: url('https://assets.website-files.com/5d80c03f1edd7bd68fcdb623/5d80d652dd362ef81e7f0ff3_CircularStd-Book.woff2') format('woff2'), url('https://assets.website-files.com/5d80c03f1edd7bd68fcdb623/5d80d6528880e8364f8bae6c_CircularStd-Book.eot') format('embedded-opentype'), url('https://assets.website-files.com/5d80c03f1edd7bd68fcdb623/5d80d652fdc07c526e2e75e0_CircularStd-Book.woff') format('woff'), url('https://assets.website-files.com/5d80c03f1edd7bd68fcdb623/5d80d652fdc07ca1c92e75e1_CircularStd-Book.ttf') format('truetype'), url('https://assets.website-files.com/5d80c03f1edd7bd68fcdb623/5d80d653550f297ed2be052f_CircularStd-Book.otf') format('opentype');
+  font-weight: 400;
+  font-style: normal;
+}
