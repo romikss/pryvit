@@ -91,7 +91,7 @@ p {
 }
 
 #navbar-ind a {
-  color: var(--orange);
+  color: var(--yellow);
 }
 
 #navbar-com a {
@@ -369,6 +369,3 @@ h1 {
   font-style: normal;
 }
 
-.navbar-dark .navbar-nav .active>.nav-link {
-  border-bottom: 5px solid #F4C127;
-}
