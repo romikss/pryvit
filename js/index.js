@@ -44,7 +44,7 @@ function renderPledges(airTableResponse) {
         pledge.classList.add('col-lg-4');
         pledge.innerHTML = `   
             <div class="card mb-5">
-                <img class="card-img img-fluid" src="${record.fields['Company Logo'][0].url}" alt="Company Logo">
+                <img class="card-img img-fluid" src="${record.fields['Company Logo'][0].url}" alt="Company Logo" style="height:240px !important; object-fit:cover;">
                 <div class="card-body d-flex flex-column">
                 <h3 class="card-title mb-4">${record.fields['Company Name']}</h3>
                 <h5 class="card-subtitle">${record.fields['Pledge Title']}</h5>

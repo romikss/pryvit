@@ -81,12 +81,12 @@ p {
 }
 
 #navbar-ind {
-  background-color: #fff ;
-  color: var(--orange);
+  background-color: var(--black);
+  color: var(--yellow);
 }
 
 #navbar-com {
-  background-color: var(--blue);
+  background-color: var(--black);
   color: var(--yellow);
 }
 
@@ -367,4 +367,8 @@ h1 {
   src: url('https://assets.website-files.com/5d80c03f1edd7bd68fcdb623/5d80d652dd362ef81e7f0ff3_CircularStd-Book.woff2') format('woff2'), url('https://assets.website-files.com/5d80c03f1edd7bd68fcdb623/5d80d6528880e8364f8bae6c_CircularStd-Book.eot') format('embedded-opentype'), url('https://assets.website-files.com/5d80c03f1edd7bd68fcdb623/5d80d652fdc07c526e2e75e0_CircularStd-Book.woff') format('woff'), url('https://assets.website-files.com/5d80c03f1edd7bd68fcdb623/5d80d652fdc07ca1c92e75e1_CircularStd-Book.ttf') format('truetype'), url('https://assets.website-files.com/5d80c03f1edd7bd68fcdb623/5d80d653550f297ed2be052f_CircularStd-Book.otf') format('opentype');
   font-weight: 400;
   font-style: normal;
+}
+
+.navbar-dark .navbar-nav .active>.nav-link {
+  border-bottom: 5px solid #F4C127;
 }
