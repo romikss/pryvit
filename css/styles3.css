@@ -13,14 +13,15 @@
   --purple: #795FB2;
   --beige: #F2EDD5;
   --yellow: #ffdd50;
-  --green: #03b2a0;
+  --green: #64D39C;
+  --green-text: #1A1B1F;
 
   --newpink: #F4ADCF;
   --red: #EB1F2A;
 
   --black: #1a1b1f;
 
-  --green: #34b170;
+
   --orange: #E08229;
 
 }
@@ -148,11 +149,15 @@ p {
 }
 
 #intro-section-ind h1 {
-  color: #fff;
+  color: var(--green-text);
 }
 
 #intro-section-ind h2 {
-  color: #fff;
+  color: var(--green-text);
+}
+
+.intro-desc {
+  color: var(--green-text);
 }
 
 #container-intro {
@@ -241,7 +246,8 @@ p {
 }
 
 #about-section-ind {
-  background-color: var(--orange);
+  background-color: var(--green);
+  color: var(--green-text);
 }
 
 .about-main p {
@@ -367,5 +373,10 @@ h1 {
   src: url('https://assets.website-files.com/5d80c03f1edd7bd68fcdb623/5d80d652dd362ef81e7f0ff3_CircularStd-Book.woff2') format('woff2'), url('https://assets.website-files.com/5d80c03f1edd7bd68fcdb623/5d80d6528880e8364f8bae6c_CircularStd-Book.eot') format('embedded-opentype'), url('https://assets.website-files.com/5d80c03f1edd7bd68fcdb623/5d80d652fdc07c526e2e75e0_CircularStd-Book.woff') format('woff'), url('https://assets.website-files.com/5d80c03f1edd7bd68fcdb623/5d80d652fdc07ca1c92e75e1_CircularStd-Book.ttf') format('truetype'), url('https://assets.website-files.com/5d80c03f1edd7bd68fcdb623/5d80d653550f297ed2be052f_CircularStd-Book.otf') format('opentype');
   font-weight: 400;
   font-style: normal;
+}
+
+.pledge-card-content {
+  height: 500px;
+  overflow: scroll;
 }
 

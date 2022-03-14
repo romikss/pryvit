@@ -10,7 +10,8 @@ function changeLang(newLang) {
 
 function fetchPledges(pageIdx) {
 
-    const qryStr = `%7BLanguage%7D%3D'${lang}'`;
+    let qryStr = `%7BLanguage%7D%3D'${lang}'`; //filter by selected lang
+    qryStr += '&sort%5B0%5D%5Bfield%5D=ID&sort%5B0%5D%5Bdirection%5D=desc';  //sort by id desc
 
     return fetch(`https://api.airtable.com/v0/appodNTtY8v2Dnsjb/Table%201?filterByFormula=${qryStr}`, {
         headers: {
@@ -19,7 +20,21 @@ function fetchPledges(pageIdx) {
       }).then((response) => response.json());
 }
 
+function searchPledges() {
 
+    const qryStr = document.getElementById('pledgeSearchInput').value.toLowerCase();
+    const qryParam = `OR(FIND(%22${qryStr}%22%2C+LOWER(%7BPledge+Title%7D))%2C+FIND(%22${qryStr}%22%2C+LOWER(%7BPledge+Description%7D))%2C+FIND(%22${qryStr}%22%2C+LOWER(%7BCompany+Name%7D)))`; 
+    
+    fetch(`https://api.airtable.com/v0/appodNTtY8v2Dnsjb/Table%201?filterByFormula=${qryParam}`, {
+        headers: {
+          'Authorization': 'Bearer keyMLcEdCNp7GO3Is'
+        }
+      }).then((response) => response.json()).then(
+          filteredResults => {
+              renderPledges(filteredResults);
+          }
+      );
+}
 
 
 window.onload = function() {
@@ -40,12 +55,13 @@ function renderPledges(airTableResponse) {
 
     airTableResponse.records.forEach(record => {
         
+        const logo = record.fields['Company Logo'] ? record.fields['Company Logo'][0].url: 'no-image.png';
         const pledge = document.createElement("div");
         pledge.classList.add('col-lg-4');
         pledge.innerHTML = `   
             <div class="card mb-5">
-                <img class="card-img img-fluid" src="${record.fields['Company Logo'][0].url}" alt="Company Logo" style="height:240px !important; object-fit:cover;">
-                <div class="card-body d-flex flex-column">
+                <img class="card-img img-fluid" src="${logo}" alt="Company Logo" style="height:240px !important; object-fit:cover;">
+                <div class="card-body d-flex flex-column pledge-card-content">
                 <h3 class="card-title mb-4">${record.fields['Company Name']}</h3>
                 <h5 class="card-subtitle">${record.fields['Pledge Title']}</h5>
                 <p class="card-text">${record.fields['Pledge Description']}</p>
