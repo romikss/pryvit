@@ -1,11 +1,8 @@
 let lang = 'English'; //Ukrainian
 
 function changeLang(newLang) {
-    lang = newLang;
-    localStorage.setItem('lang', newLang);
-    fetchPledges(0).then(result => {
-        renderPledges(result);
-    });
+    localStorage.setItem("lang", newLang);
+    window.location.href = (newLang === 'English') ? 'index.html': 'index-ua.html';
 }
 
 function fetchPledges(pageIdx) {
@@ -38,11 +35,9 @@ function searchPledges() {
 
 
 window.onload = function() {
-
     lang = localStorage.getItem('lang') || 'English';
 
     fetchPledges(0).then(result => {
-        console.log(result);
         renderPledges(result);
     });
 
@@ -50,12 +45,14 @@ window.onload = function() {
 
 function renderPledges(airTableResponse) {
 
+    const pledgeTitles = getTitles();
+    
     const pledgeWrapper = document.getElementById('company-pledge-wrapper');
     pledgeWrapper.innerHTML = '';
 
     airTableResponse.records.forEach(record => {
         
-        const logo = record.fields['Company Logo'] ? record.fields['Company Logo'][0].url: 'no-image.png';
+        const logo = record.fields['Company Logo'] ? record.fields['Company Logo'][0].url: 'images/no-image.png';
         const pledge = document.createElement("div");
         pledge.classList.add('col-lg-4');
         pledge.innerHTML = `   
@@ -65,14 +62,18 @@ function renderPledges(airTableResponse) {
                 <h3 class="card-title mb-4">${record.fields['Company Name']}</h3>
                 <h5 class="card-subtitle">${record.fields['Pledge Title']}</h5>
                 <p class="card-text">${record.fields['Pledge Description']}</p>
-                <h5 class="card-subtitle">How to Avail</h5>
+                <h5 class="card-subtitle">${pledgeTitles.avail}</h5>
                 <p class="card-text">${record.fields['How to Avail']}</p>
-                <h5 class="card-subtitle">Contact Name</h5>
+                <h5 class="card-subtitle">${pledgeTitles.address}</h5>
+                <p class="card-text">${record.fields['Address']}</p>
+                <h5 class="card-subtitle">${pledgeTitles.name}</h5>
                 <p class="card-text">${record.fields['Contact Name']}</p>
-                <h5 class="card-subtitle">Contact Email</h5>
+                <h5 class="card-subtitle">${pledgeTitles.email}</h5>
                 <p class="card-text">${record.fields['Email Address']}</p>
-                <h5 class="card-subtitle">Contact Phone</h5>
+                <h5 class="card-subtitle">${pledgeTitles.phone}</h5>
                 <p class="card-text">${record.fields['Phone Number']}</p>
+                <h5 class="card-subtitle">${pledgeTitles.site}</h5>
+                <p class="card-text">${record.fields['Website']}</p>
                 </div>
             </div>
         `;
@@ -80,5 +81,34 @@ function renderPledges(airTableResponse) {
         pledgeWrapper.appendChild(pledge);    
     });
 } 
+
+function getTitles() {
+
+    let titles;
+    
+    if(lang === 'English') {
+        titles = {
+            avail: 'How to Avail',
+            address: 'Address',
+            site: 'Website',
+            name: 'Contact Name',
+            email: 'Contact Email',
+            phone: 'Contact Phone'
+        }
+    }
+    else {
+        titles = {
+            avail: 'Як скористатися пропозицією',
+            address: 'адреса',
+            site: 'веб-сай',
+            name: 'Контактна Особа',
+            email: 'Електронна адреса',
+            phone: 'Номер телефону'
+        }
+    }
+    return titles;
+}
+
+
 
 
