@@ -29,11 +29,12 @@
 /* Body */
 
 body {
-  font-family: 'Oswald', sans-serif;
+  font-family: 'Montserrat', sans-serif;
   font-weight: 300;
 }
 
 h1 {
+  font-family: 'Oswald', sans-serif;
   text-align: center;
   font-size: 50px;
   font-weight: 800;
@@ -42,6 +43,7 @@ h1 {
 }
 
 h2 {
+  font-family: 'Oswald', sans-serif;
   color: var(--blue);
   text-align: center;
   font-size: 50px;
@@ -49,9 +51,11 @@ h2 {
 }
 
 h3 {
+  font-family: 'Oswald', sans-serif;
   font-size: 30px;
   font-weight: 600;
   margin-bottom: 10px;
+  text-transform: uppercase;
 }
 
 h4 {
@@ -78,6 +82,7 @@ p {
 .navbar {
   font-weight: 800;
   text-transform: uppercase;
+  font-family: 'Oswald', sans-serif;
 }
 
 #navbar-ind {
@@ -103,7 +108,7 @@ p {
 }
 
 #navbar-com a:hover {
-  color: var(--lightwhite);
+  color: var(--blue);
 }
 
 .nav-item {
@@ -279,8 +284,33 @@ p {
   text-align: center;
 }
 
+#privacy {
+  text-align: center;
+  margin-top: 10px;
+  text-decoration: underline;
+  font-size: 10px;
+}
+
 .logo-footer {
   text-align: center;
+}
+
+/* Privacy Policy */
+
+#section-privacy {
+  text-align: left;
+}
+
+#privacy-title {
+  text-align: left;
+}
+
+#section-privacy p {
+  text-align: left;
+}
+
+#section-privacy h3 {
+  margin-bottom: 50px;
 }
 
 /* Media Queries */
@@ -378,4 +408,3 @@ h1 {
   height: 600px;
   overflow: scroll;
 }
-
