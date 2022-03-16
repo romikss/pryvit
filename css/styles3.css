@@ -29,26 +29,26 @@
 /* Body */
 
 body {
-  font-family: 'Montserrat', sans-serif;
+  font-family: 'Oswald', sans-serif;
+  font-weight: 300;
 }
 
 h1 {
   text-align: center;
-  font-family: 'Bebas Neue', cursive;
   font-size: 50px;
   font-weight: 800;
   margin-bottom: 50px;
+  text-transform: uppercase;
 }
 
 h2 {
   color: var(--blue);
-  font-family: 'Bebas Neue', cursive;
   text-align: center;
   font-size: 50px;
+  text-transform: uppercase;
 }
 
 h3 {
-  font-family: 'Bebas Neue', cursive;
   font-size: 30px;
   font-weight: 600;
   margin-bottom: 10px;
@@ -76,7 +76,6 @@ p {
 /* Navbar */
 
 .navbar {
-  font-family: 'Montserrat', sans-serif;
   font-weight: 800;
   text-transform: uppercase;
 }
