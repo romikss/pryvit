@@ -17,7 +17,7 @@
 </head>
 
 
-<body data-spy="scroll" data-target="#navbar-site" data-offset="180">
+<body data-spy="scroll" data-target="#navbar-site" data-offset="180" onload="bodyLoaded('Ukrainian')">
 
   <nav class="navbar navbar-dark fixed-top navbar-expand-md" id="navbar-ind">
     <div class="container">
@@ -42,11 +42,9 @@
 
       <div class="row">
         <div class="nav-item" style="padding: .5rem 1rem;">Language:</div>
-        <div class="nav-item" style="font-size: 28px; cursor: pointer;" onclick="changeLang('Ukrainian')">🇺🇦</div>
-        <div class="nav-item" style="font-size: 28px; cursor: pointer;" onclick="changeLang('English')">🇮🇪</div>
+        <a class="nav-item" style="font-size: 28px; cursor: pointer;" href="index-ua.html">🇺🇦</a>
+        <a class="nav-item" style="font-size: 28px; cursor: pointer;" href="index.html">🇮🇪</a>
       </div>
-
-
 
     </div><!-- container -->
   </nav><!-- nav -->

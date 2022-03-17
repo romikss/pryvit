@@ -404,7 +404,10 @@ h1 {
   font-style: normal;
 }
 
-.pledge-card-content {
-  height: 600px;
-  overflow: scroll;
+
+@media screen and (min-width: 990px) {
+  .pledge-card-content {
+    height: 600px;
+    overflow: scroll;
+  }
 }

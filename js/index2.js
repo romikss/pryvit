@@ -1,11 +1,15 @@
-let lang = 'English'; //Ukrainian
+let pledgeTitles;
 
-function changeLang(newLang) {
-    localStorage.setItem("lang", newLang);
-    window.location.href = (newLang === 'English') ? 'index.html': 'index-ua.html';
+function bodyLoaded(lang) {
+    
+    pledgeTitles = getTitles(lang);
+
+    fetchPledges(lang).then(result => {
+        renderPledges(result);
+    });
 }
 
-function fetchPledges(pageIdx) {
+function fetchPledges(lang) {
 
     let qryStr = `%7BLanguage%7D%3D'${lang}'`; //filter by selected lang
     qryStr += '&sort%5B0%5D%5Bfield%5D=ID&sort%5B0%5D%5Bdirection%5D=desc';  //sort by id desc
@@ -34,18 +38,7 @@ function searchPledges() {
 }
 
 
-window.onload = function() {
-    lang = localStorage.getItem('lang') || 'English';
-
-    fetchPledges(0).then(result => {
-        renderPledges(result);
-    });
-
-};
-
 function renderPledges(airTableResponse) {
-
-    const pledgeTitles = getTitles();
     
     const pledgeWrapper = document.getElementById('company-pledge-wrapper');
     pledgeWrapper.innerHTML = '';
@@ -82,7 +75,7 @@ function renderPledges(airTableResponse) {
     });
 } 
 
-function getTitles() {
+function getTitles(lang) {
 
     let titles;
     
