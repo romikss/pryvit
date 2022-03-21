@@ -16,7 +16,7 @@ function fetchPledges(lang) {
 
     return fetch(`https://api.airtable.com/v0/appodNTtY8v2Dnsjb/Table%201?filterByFormula=${qryStr}`, {
         headers: {
-          'Authorization': 'Bearer keyAWZupPG1S51PoD' //this is a read-only key, please dont abuse this site :(
+            'Authorization': 'Bearer keyAWZupPG1S51PoD' //this is a read-only key, please dont abuse this site :(
         }
       }).then((response) => response.json());
 }
@@ -28,7 +28,7 @@ function searchPledges() {
     
     fetch(`https://api.airtable.com/v0/appodNTtY8v2Dnsjb/Table%201?filterByFormula=${qryParam}`, {
         headers: {
-          'Authorization': 'Bearer keyMLcEdCNp7GO3Is'
+            'Authorization': 'Bearer keyAWZupPG1S51PoD' //this is a read-only key, please dont abuse this site :(
         }
       }).then((response) => response.json()).then(
           filteredResults => {
