@@ -66,7 +66,7 @@ function renderPledges(airTableResponse) {
                 <h5 class="card-subtitle">${pledgeTitles.phone}</h5>
                 <p class="card-text">${record.fields['Phone Number']}</p>
                 <h5 class="card-subtitle">${pledgeTitles.site}</h5>
-                <p class="card-text">${record.fields['Website']}</p>
+                <p class="card-text"><a href="${record.fields['Website']}">${record.fields['Website']}</a></p>
                 </div>
             </div>
         `;
