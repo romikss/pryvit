@@ -48,7 +48,7 @@ function renderPledges(airTableResponse) {
         const logo = record.fields['Company Logo'] ? record.fields['Company Logo'][0].url: 'images/no-image.png';
         let website = record.fields['Website'];
         if(website) {
-            if(web.substring(0,4) !== 'http') {
+            if(website.substring(0,4) !== 'http') {
                 website = 'https://' + website;
             }
         }
