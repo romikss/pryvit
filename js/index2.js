@@ -46,6 +46,12 @@ function renderPledges(airTableResponse) {
     airTableResponse.records.forEach(record => {
         
         const logo = record.fields['Company Logo'] ? record.fields['Company Logo'][0].url: 'images/no-image.png';
+        let website = record.fields['Website'];
+        if(website) {
+            if(web.substring(0,4) !== 'http') {
+                website = 'https://' + website;
+            }
+        }
         const pledge = document.createElement("div");
         pledge.classList.add('col-lg-4');
         pledge.innerHTML = `   
@@ -66,7 +72,7 @@ function renderPledges(airTableResponse) {
                 <h5 class="card-subtitle">${pledgeTitles.phone}</h5>
                 <p class="card-text">${record.fields['Phone Number']}</p>
                 <h5 class="card-subtitle">${pledgeTitles.site}</h5>
-                <p class="card-text"><a href="${record.fields['Website']}">${record.fields['Website']}</a></p>
+                <p class="card-text"><a href="${website}">${website}</a></p>
                 </div>
             </div>
         `;
