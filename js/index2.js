@@ -14,9 +14,9 @@ function fetchPledges(lang) {
     let qryStr = `%7BLanguage%7D%3D'${lang}'`; //filter by selected lang
     qryStr += '&sort%5B0%5D%5Bfield%5D=ID&sort%5B0%5D%5Bdirection%5D=desc';  //sort by id desc
 
-    return fetch(`https://api.airtable.com/v0/appodNTtY8v2Dnsjb/Table%201?filterByFormula=${qryStr}`, {
+    return fetch(`https://api.airtable.com/v0/appd8csBESlAchvwV/Data?filterByFormula=${qryStr}`, {
         headers: {
-            'Authorization': 'Bearer keyAWZupPG1S51PoD' //this is a read-only key, please dont abuse this site :(
+            'Authorization': 'Bearer key43XraCkn9AIbW4' //this is a read-only key, please dont abuse this site :(
         }
       }).then((response) => response.json());
 }
