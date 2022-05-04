@@ -26,7 +26,7 @@ function searchPledges() {
     const qryStr = document.getElementById('pledgeSearchInput').value.toLowerCase();
     const qryParam = `OR(FIND(%22${qryStr}%22%2C+LOWER(%7BPledge+Title%7D))%2C+FIND(%22${qryStr}%22%2C+LOWER(%7BPledge+Description%7D))%2C+FIND(%22${qryStr}%22%2C+LOWER(%7BCompany+Name%7D)))`; 
     
-    fetch(`https://api.airtable.com/v0/appodNTtY8v2Dnsjb/Table%201?filterByFormula=${qryParam}`, {
+    fetch(`https://api.airtable.com/v0/appd8csBESlAchvwV/Data?filterByFormula=${qryParam}`, {
         headers: {
             'Authorization': 'Bearer keyAWZupPG1S51PoD' //this is a read-only key, please dont abuse this site :(
         }
