@@ -28,7 +28,7 @@ function searchPledges() {
     
     fetch(`https://api.airtable.com/v0/appd8csBESlAchvwV/Data?filterByFormula=${qryParam}`, {
         headers: {
-            'Authorization': 'Bearer keyAWZupPG1S51PoD' //this is a read-only key, please dont abuse this site :(
+            'Authorization': 'Bearer key43XraCkn9AIbW4' //this is a read-only key, please dont abuse this site :(
         }
       }).then((response) => response.json()).then(
           filteredResults => {
