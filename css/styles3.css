@@ -12,6 +12,7 @@
   --blue: #005bbb;
   --purple: #795FB2;
   --beige: #F2EDD5;
+  --beigecustom: #FFF6E8
   --yellow: #ffdd50;
   --green: #64D39C;
   --green-text: #1A1B1F;
@@ -104,7 +105,7 @@ p {
 }
 
 #navbar-ind a:hover {
-  color: var(--green);
+  color: var(--beigecustom);
 }
 
 #navbar-com a:hover {
@@ -149,7 +150,7 @@ p {
 }
 
 #intro-section-ind {
-  background-color: var(--green);
+  background-color: var(--beigecustom);
 }
 
 #intro-section-ind h1 {
@@ -250,7 +251,7 @@ p {
 }
 
 #about-section-ind {
-  background-color: var(--green);
+  background-color: var(--beigecustom);
   color: var(--green-text);
 }
 
