@@ -21,6 +21,7 @@
   --red: #EB1F2A;
 
   --black: #1a1b1f;
+  --darkbeigecustom: #C6BEB0;
 
 
   --orange: #E08229;
@@ -87,12 +88,12 @@ p {
 }
 
 #navbar-ind {
-  background-color: var(--black);
+  background-color: var(--darkbeigecustom);
   color: var(--yellow);
 }
 
 #navbar-com {
-  background-color: var(--black);
+  background-color: var(--darkbeigecustom);
   color: var(--yellow);
 }
 
@@ -265,13 +266,13 @@ p {
 }
 
 #about-title {
-  color: var(--black);
+  color: var(--darkbeigecustom);
 }
 
 /* Footer */
 
 .footer-main {
-  background-color: var(--black);
+  background-color: var(--darkbeigecustom);
   padding-bottom: 3rem;
   padding-top: 3rem;
   text-align: center;
